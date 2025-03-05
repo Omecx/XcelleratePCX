@@ -1,178 +1,122 @@
+# XcelleratePCX .gitignore
+
 ###########################
-# Project-specific excludes
+# Project specific
 ###########################
-# Documentation and change tracking files
-/ChangeDocs/
-/component-refactoring-summary.md
 rejected/
-fix-eslint-warnings.js
-api-endpoint-fixes-update.md
-
-# Patch and merge artifacts
-*.rej
-*.orig
-
-# Temporary files
+%OUTPUT%/
 tempCodeRunnerFile.python
-*.tmp
-*.temp
+filtered_project_structure.txt
+project_structure.txt
+filter.ps1
+component-refactoring-summary.md
 
 ###########################
-# Environment & Configuration
+# React/Frontend specific
 ###########################
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-/env/
-
-# Keep example env file
-!.env.example
-
-###########################
-# Database files
-###########################
-*.sqlite
-*.sqlite3
-*.db
-db.sqlite3
-*.sql
-*.bak
-
-###########################
-# Media and uploaded files
-###########################
-/media/
-/uploads/
-/static/
-/back_pcx/media/
-
-###########################
-# Frontend specific
-###########################
-# Dependencies
+# dependencies
 /front_pcx/node_modules/
-/node_modules/
-/.pnp
-.pnp.js
+/front_pcx/.pnp
+/front_pcx/.pnp.js
+/front_pcx/ChangeDocs/
 
-# Testing
+# testing
 /front_pcx/coverage/
-/coverage/
 
-# Production build
+# production
 /front_pcx/build/
 /front_pcx/dist/
-/build/
-/dist/
+
+# misc
+/front_pcx/.DS_Store
+/front_pcx/.env
+/front_pcx/.env.local
+/front_pcx/.env.development.local
+/front_pcx/.env.test.local
+/front_pcx/.env.production.local
+
+/front_pcx/npm-debug.log*
+/front_pcx/yarn-debug.log*
+/front_pcx/yarn-error.log*
+
+# development tools
+/front_pcx/fix-eslint.js
+/front_pcx/src/fix-eslint-warnings.js
+/front_pcx/src/reportWebVitals.js
+
+###########################
+# Django/Backend specific
+###########################
+# Python bytecode
+/back_pcx/**/__pycache__/
+/back_pcx/**/*.py[cod]
+/back_pcx/**/*.so
+/back_pcx/**/*.mo
+/back_pcx/**/*.pot
+__pycache__/
+*.py[cod]
+
+# Django Database
+/back_pcx/db.sqlite3
+/back_pcx/db.sqlite3-journal
+
+# Django Media Files (all user uploads)
+/back_pcx/media/
+/back_pcx/media/profile_pics/
+/back_pcx/media/uploads/
+/back_pcx/media/uploads/categories/
+/back_pcx/media/uploads/products/
+
+# Django Static Collection
+/back_pcx/static/
+/back_pcx/staticfiles/
+
+# Django Local Settings
+/back_pcx/local_settings.py
+/back_pcx/.env
+
+# Development/Debug files
+/back_pcx/testo.py
+/back_pcx/.coverage
+/back_pcx/htmlcov/
+
+###########################
+# Environment & IDE files
+###########################
+# Virtual Environment
+/env/
+venv/
+ENV/
+.env/
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+logs/
 *.log
 
 # Cache
 .cache/
 .eslintcache
-.npm
-.parcel-cache
+__pycache__/
+.parcel-cache/
+.npm/
 
-# Package files
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
 *.tgz
+
+# Yarn Integrity file
 .yarn-integrity
 
-###########################
-# Backend specific
-###########################
-# Python bytecode
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-
-# Distribution / packaging
-.Python
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-/venv/
-/.venv/
-/ENV/
-
-###########################
-# IDE and Editor files
-###########################
-.idea/
-.vscode/
-*.swp
-*.swo
-*.sublime-*
-.DS_Store
-Thumbs.db
-.project
-.classpath
-.settings/
-
-###########################
-# Framework specific
-###########################
-# React/Next.js
-.next/
-out/
-
-# Django
-*.pot
-local_settings.py
-db.sqlite3-journal
-
-# Serverless
+# Local directories
 .serverless/
-
-# Local Netlify folder
 .netlify/
-
-# Django Database
-back_pcx/db.sqlite3
-back_pcx/db.sqlite3-journal
-
-# Django Media
-back_pcx/media/
-back_pcx/media/profile_pics/
-back_pcx/media/uploads/
-
-# Django Static Collection (if used)
-back_pcx/static/
-back_pcx/staticfiles/
-
-# Django Cache
-back_pcx/**/__pycache__/
-back_pcx/**/*.py[cod]
-back_pcx/**/*.so
-
-# Django Local Settings
-back_pcx/local_settings.py
-back_pcx/.env
-
-# Django Logs
-back_pcx/logs/
-back_pcx/**/*.log
-
-# Django Test/Development Files
-back_pcx/testo.py
-back_pcx/.coverage
-back_pcx/htmlcov/
