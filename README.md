@@ -1,4 +1,4 @@
-# XcelleratePCX Frontend
+# XcelleratePCX 
 
 A modern e-commerce platform built with React, featuring a robust API integration and optimized performance.
 
@@ -14,6 +14,18 @@ A modern e-commerce platform built with React, featuring a robust API integratio
 - 🔒 Secure API integration
 - 📊 Analytics integration
 - 🎨 Modern UI/UX
+
+## Project Overview
+
+XcelleratePCX consists of two main components:
+- Frontend (React)
+- Backend (Django)
+
+Below are the setup instructions for both parts.
+
+---
+
+# Frontend Setup (front_pcx)
 
 ## Prerequisites
 
@@ -94,6 +106,82 @@ Optional environment variables:
 - `REACT_APP_ANALYTICS_ID`: Analytics tracking ID
 - `REACT_APP_ENABLE_*`: Feature flags
 
+---
+
+# Backend Setup (back_pcx)
+
+## Prerequisites
+
+- Python 3.8+
+- PostgreSQL
+
+## Setup Steps
+
+1. Navigate to the project folder:
+```bash
+cd XcelleratePCX
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv env
+```
+
+3. Activate the virtual environment:
+   - Windows:
+     ```bash
+     env\Scripts\activate
+     ```
+   - Linux/Mac:
+     ```bash
+     source env/bin/activate
+     ```
+
+4. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+5. Setup environment variables:
+```bash
+cd back_pcx
+cp back_pcx/.env.example back_pcx/.env
+```
+Edit the `.env` file with your database credentials and other settings.
+
+6. Apply migrations:
+```bash
+python manage.py migrate
+```
+
+7. Create a superuser:
+```bash
+python manage.py createsuperuser
+```
+
+8. Run the development server:
+```bash
+python manage.py runserver
+```
+
+## API Endpoints
+
+The backend will be available at `http://localhost:8000/`
+
+- Admin panel: `/admin/`
+- API: `/api/`
+  - Products: `/api/products/`
+  - Categories: `/api/categories/`
+  - Authentication: `/api/token/`
+
+## Common Issues
+
+- **Database connection errors**: Ensure PostgreSQL is running and credentials are correct
+- **Module not found errors**: Check that all dependencies are installed
+- **Migration errors**: Try `python manage.py makemigrations` before migrating
+
+---
+
 ## Contributing
 
 1. Fork the repository
@@ -111,11 +199,11 @@ Optional environment variables:
 
 ## Performance Optimization
 
-- Implemented request caching
-- Optimized bundle size
-- Lazy loading of components
-- Efficient state management
-- Optimized API calls
+[- Implemented request caching]:#
+[- Optimized bundle size]:#
+[- Lazy loading of components]:#
+[- Efficient state management]:#
+[- Optimized API calls]:#
 
 ## License
 
@@ -123,4 +211,4 @@ Optional environment variables:
 
 ## Support
 
-For support, email omecx100@gmail.com or create an issue in the repository.
+For support, please create an issue in the repository.
