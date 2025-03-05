@@ -1,122 +1,130 @@
 # XcelleratePCX .gitignore
 
 ###########################
-# Project specific
+# Project specific files
 ###########################
-rejected/
-%OUTPUT%/
-tempCodeRunnerFile.python
+# Build outputs
+/%OUTPUT%/
 filtered_project_structure.txt
 project_structure.txt
+
+# Utilities and temporary files
 filter.ps1
+tempCodeRunnerFile.python
 component-refactoring-summary.md
+*.tmp
+*.temp
+
+# Specific project directories
+/rejected/
 
 ###########################
-# React/Frontend specific
+# Frontend specific
 ###########################
-# dependencies
+# Dependencies
 /front_pcx/node_modules/
 /front_pcx/.pnp
 /front_pcx/.pnp.js
-/front_pcx/ChangeDocs/
 
-# testing
-/front_pcx/coverage/
-
-# production
+# Build outputs
 /front_pcx/build/
 /front_pcx/dist/
 
-# misc
-/front_pcx/.DS_Store
+# Testing
+/front_pcx/coverage/
+
+# Development files
+/front_pcx/fix-eslint.js
+/front_pcx/ChangeDocs/
+/front_pcx/ChangeDocs/fix-eslint.js
+/front_pcx/ChangeDocs/fix-eslint-warnings.js
+/front_pcx/src/reportWebVitals.js
+/front_pcx/src/fix-eslint-warnings.js
+
+# Environment files
 /front_pcx/.env
 /front_pcx/.env.local
 /front_pcx/.env.development.local
 /front_pcx/.env.test.local
 /front_pcx/.env.production.local
 
+# Logs
 /front_pcx/npm-debug.log*
 /front_pcx/yarn-debug.log*
 /front_pcx/yarn-error.log*
 
-# development tools
-/front_pcx/fix-eslint.js
-/front_pcx/src/fix-eslint-warnings.js
-/front_pcx/src/reportWebVitals.js
-
 ###########################
-# Django/Backend specific
+# Backend specific
 ###########################
-# Python bytecode
+# Python bytecode and cache
+**/__pycache__/
+**/*.py[cod]
+**/*.so
+**/*.mo
+**/*.pot
 /back_pcx/**/__pycache__/
-/back_pcx/**/*.py[cod]
-/back_pcx/**/*.so
-/back_pcx/**/*.mo
-/back_pcx/**/*.pot
-__pycache__/
-*.py[cod]
+/back_pcx/back_pcx/__pycache__/
+/back_pcx/main/__pycache__/
 
-# Django Database
+# Virtual environment
+/env/
+/venv/
+/ENV/
+
+# Database
 /back_pcx/db.sqlite3
 /back_pcx/db.sqlite3-journal
 
-# Django Media Files (all user uploads)
+# Environment files
+/back_pcx/.env
+/back_pcx/back_pcx/.env
+/back_pcx/local_settings.py
+
+# Media and uploads (all user content)
 /back_pcx/media/
 /back_pcx/media/profile_pics/
 /back_pcx/media/uploads/
 /back_pcx/media/uploads/categories/
 /back_pcx/media/uploads/products/
+/back_pcx/media/uploads/**/*.jpeg
+/back_pcx/media/uploads/**/*.jpg
+/back_pcx/media/uploads/**/*.png
 
-# Django Static Collection
+# Static files collection
 /back_pcx/static/
 /back_pcx/staticfiles/
 
-# Django Local Settings
-/back_pcx/local_settings.py
-/back_pcx/.env
-
-# Development/Debug files
+# Test files
 /back_pcx/testo.py
 /back_pcx/.coverage
 /back_pcx/htmlcov/
 
 ###########################
-# Environment & IDE files
+# IDE and editor files
 ###########################
-# Virtual Environment
-/env/
-venv/
-ENV/
-.env/
-
-# IDE and Editor files
-.idea/
 .vscode/
+.idea/
 *.swp
 *.swo
-Thumbs.db
+*~
 .DS_Store
 
-# Logs
-logs/
+###########################
+# OS generated files
+###########################
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+###########################
+# Logs and databases
+###########################
 *.log
-
-# Cache
-.cache/
+logs/
 .eslintcache
-__pycache__/
-.parcel-cache/
-.npm/
-
-# Optional REPL history
+.npm
 .node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# Local directories
-.serverless/
-.netlify/
