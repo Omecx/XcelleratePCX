@@ -1,0 +1,86 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.login-form-cont img {
+    height: 10vh;
+}
+
+.login-form {
+    /* background-color: aqua; */
+    margin-top: 50px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    /* border: #2D3142 solid 10px;  */
+}
+
+.lg-credentials, .register {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    border: #2D3142 solid 5px;
+    font-weight: 500;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 8px #4F5D75;
+}
+
+.lg-credentials h2{
+    color: #e56934;
+}
+
+.lg-credentials {
+    color: #EF8354;
+    background-color: #4F5D75;
+    flex: none;
+}
+
+
+.register {
+    background-color: #EF8354;
+}
+
+.lg-credentials input[type="text"], 
+.lg-credentials input[type="password"] {
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    outline: none;
+    outline: none;
+}
+
+.lg-credentials input[type=text]:hover,
+.lg-credentials input[type=password]:hover {
+    outline: #2D3142 solid 4px;
+}
+.lg-credentials input[type=text]:focus,
+.lg-credentials input[type=password]:focus {
+    border: #e56934c2 solid 3px;
+}
+
+.lg-credentials button {
+    margin-top: 5vh;
+}
+
+@media screen and (max-width:750px) {
+    .lg-credentials, .register {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:750px) {
+    .lg-credentials, .register {
+        width: 30%;
+    }
+}
+
+

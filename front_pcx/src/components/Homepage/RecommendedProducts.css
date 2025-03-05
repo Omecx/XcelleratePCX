@@ -1,0 +1,61 @@
+.recommended-products-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.recommended-products-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.recommended-products-section .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.recommended-products-section .section-description {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+/* Animation for recommendations */
+.recommended-products-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommended-products-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recommended-products-section {
+        padding: 2rem 0;
+    }
+    
+    .recommended-products-section .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .recommended-products-section .section-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Card list overrides */
+.recommended-products-section .card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.recommended-products-section .card-list h3 {
+    display: none; /* Hide the CardList component's heading */
+} 

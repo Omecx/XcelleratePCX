@@ -1,0 +1,19 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+.order-status-cont  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #2D3142;
+}
+
+#failed {
+    color: red;
+    font-size: 40px;
+}
+
+#placed {
+    color: green;
+    font-size: 40px;
+}

@@ -1,0 +1,237 @@
+/**
+ * CheckoutPage.css
+ * Styling for the checkout and cart page
+ */
+
+/* Reset is handled globally, no need for local reset */
+
+.checkout-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Table Styling */
+.checkout-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tbl-content {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tbl-content thead {
+    background-color: #4a6cf7;
+    color: white;
+}
+
+.tbl-content th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: none !important;
+}
+
+.tbl-content td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    vertical-align: middle;
+}
+
+/* Product Cell Styling */
+.pd-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pd-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.pd-card h4 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.product-link:hover {
+    opacity: 0.8;
+}
+
+/* Price and Quantity Styling */
+.price-cell, .quantity-cell, .subtotal-cell {
+    font-weight: 500;
+    color: #333;
+}
+
+.subtotal-cell {
+    color: #4a6cf7;
+}
+
+/* Total Row Styling */
+.total-row {
+    background-color: #f8f9fa;
+}
+
+.total-label {
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.total-amount {
+    font-weight: 700;
+    color: #4a6cf7;
+    font-size: 1.2rem;
+}
+
+/* Button Container */
+.btn-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+/* Button Styling */
+.continue-shopping-btn, .proceed-payment-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continue-shopping-btn {
+    background-color: #f5f5f5;
+    color: #555;
+}
+
+.continue-shopping-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.proceed-payment-btn {
+    background-color: #4a6cf7;
+    color: white;
+}
+
+.proceed-payment-btn:hover {
+    background-color: #3a5ce5;
+}
+
+.remove-item-btn {
+    background: none;
+    cursor: pointer;
+    color: #e53935;
+    transition: color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    color: #c62828;
+}
+
+/* Empty Cart Styling */
+.empty-cart {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.empty-cart p {
+    margin: 1rem 0 2rem;
+    color: #666;
+}
+
+.empty-cart .continue-shopping-btn {
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.loading-spinner {
+    color: #4a6cf7;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-cont {
+        padding: 1rem;
+    }
+    
+    .tbl-content {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .btn-cont {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .continue-shopping-btn, .proceed-payment-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .pd-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .pd-card img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .header {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,44 @@
+.categories-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.categories-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.categories-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.categories-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.categories-container {
+    margin-bottom: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-page {
+        padding: 1.5rem 1rem;
+    }
+    
+    .categories-header {
+        margin-bottom: 2rem;
+    }
+    
+    .categories-header h1 {
+        font-size: 2rem;
+    }
+    
+    .categories-header p {
+        font-size: 1rem;
+    }
+}

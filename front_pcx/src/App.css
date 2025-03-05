@@ -1,0 +1,80 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.App-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px; /* Fixed height for the header */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  padding-top: 90px; /* Add padding to account for fixed navbar */
+  min-height: calc(100vh - 80px); /* Ensure main content takes up remaining space */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Carousel container styles */
+.carousel-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Dashboard container styles */
+.dashboard-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .App-header {
+    height: 70px;
+  }
+  
+  .main {
+    padding-top: 80px; /* Slightly less padding on smaller screens */
+  }
+  
+  .dashboard-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    height: 60px;
+  }
+  
+  .main {
+    padding-top: 70px; /* Even less padding on mobile */
+  }
+}
+

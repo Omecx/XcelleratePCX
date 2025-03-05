@@ -1,0 +1,104 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.homePage-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.carousel-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #4F5D75;
+}
+
+.popularProducts, 
+.popularCategories, 
+.popularSellers, 
+.latestReviews {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.popularProducts h3, 
+.popularCategories h3, 
+.popularSellers h3, 
+.latestReviews h3 {
+    font-size: 1.8rem;
+    color: #2D3142;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 5px solid #EF8354;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        padding: 0 10px;
+    }
+    
+    .popularProducts, 
+    .popularCategories, 
+    .popularSellers, 
+    .latestReviews {
+        padding: 15px 10px;
+    }
+    
+    .popularProducts h3, 
+    .popularCategories h3, 
+    .popularSellers h3, 
+    .latestReviews h3 {
+        font-size: 1.5rem;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-container {
+        padding: 0 5px;
+    }
+    
+    .popularProducts h3, 
+    .popularCategories h3, 
+    .popularSellers h3, 
+    .latestReviews h3 {
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+}
+
+.latestOffers {
+    padding: 10px 10px;
+    background-color:#4F5D75;
+}
+
+.latestReviews {
+    padding: 0px 20px;
+    background-color: #4F5D75;
+}
+

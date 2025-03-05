@@ -1,0 +1,267 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142, #02081C*/
+/* Common styles for .NavBarItems */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.NavBarItems {
+    display: flex;
+    width: 90%;
+    height: 80px; /* Fixed height for consistency */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    flex-direction: row;
+    background-color: #02081c;
+    box-shadow: #4F5D75 0px 5px 15px;
+    border-radius: 10px;
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1000; /* Ensure it's above all content */
+    max-width: 1400px; /* Maximum width for very large screens */
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img{
+    height: 60px;
+  }
+  
+  /* Styles for .nav-menu */
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    grid-gap: 10px;
+    align-items: center;
+  }
+  
+  /* Styles for .NavBarItems li */
+  .NavBarItems li {
+    padding: 0px 10px;
+  }
+  
+  /* Styles for .NavBarItems a */
+  .NavBarItems a {
+    color: #EF8354;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styles for .NavBarItems a:hover */
+  .NavBarItems a:hover {
+    background-color: #2D3142;
+    /* color: #02081C; */
+  }
+
+  /* Remove button default styles */
+  .logout-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-items: center;
+    color: #EF8354;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-btn:focus {
+    outline: none; /* Remove the default focus border */
+  }
+
+  .logout-btn:hover {
+    background-color: #2D3142; /* Show underline on hover like links */
+  }
+  
+  /* Styles for .SearchBar */
+  .SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    border-radius: 7px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Styles for .SearchBar when focused */
+  .SearchBar:focus-within {
+    border: 2px solid #EF8354;
+  }
+
+  /* Styles for .SearchBar input[type=text] */
+  .SearchBar input[type=text] {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+  }
+  
+  .SearchBar input::placeholder {
+    color: #38588f;
+  }
+  
+  /* Styles for .SearchBar .search-btn */
+  .SearchBar .search-btn {
+    padding: 8px 12px;
+    background-color: #BFC0C0;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  /* Styles for .SearchBar .search-btn:hover */
+  .SearchBar .search-btn:hover {
+    background-color: #a4a8a88a;
+  }
+  
+  /* Styles for .menuIcon button */
+  .menuIcon button {
+    display: none;
+    background-color:#02081c;
+    color: #EF8354;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .dropdown {
+    padding: 0px 5px;
+    list-style: none;
+  }
+
+  .dropdown-content {
+    padding: 5px 0px 5px 0px;
+    background-color: #02081c;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Mobile menu close button */
+  .mobile-menu-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #EF8354;
+    color: #02081C;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+@media screen and (max-width: 750px) and (max-height: 600px),
+       screen and (max-width: 1280px),
+       screen and (max-height: 600px) {
+
+  .NavBarItems {
+    width: 95%;
+    height: 70px; /* Slightly smaller on mobile */
+    z-index: 1000; /* Consistent z-index */
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .logout-btn {
+    font-weight: bold;
+  }
+
+  .logout-btn:hover {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background: #EF8354;
+    color: #02081C;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-weight: bolder;
+    background: rgba(2, 8, 28, 0.98); /* More opaque background */
+    box-shadow: 0px 10px 2px rgba(239, 131, 84, 0.683);
+    backdrop-filter: blur(10px); /* Increased blur for better visibility */
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    align-items: stretch;
+    padding: 70px 0 50px 20px; /* Increased top padding to avoid overlap with navbar */
+    margin: 0;
+    z-index: 999; /* Just below the navbar */
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Show the mobile menu close button when menu is active */
+  .nav-menu.active + .mobile-menu-close {
+    display: flex;
+  }
+
+  .NavBarItems a:hover {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background: #EF8354;
+    color: #02081C;
+  }
+
+  .menuIcon button{
+    display: block;
+  }
+
+  .SearchBar input[type=text] {
+    width: 100%;
+  }
+  
+  /* Styles for .SearchBar */
+  .SearchBar {
+    margin-right: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+  
+  /* Styles for .SearchBar .search-btn */
+  .SearchBar .search-btn {
+    padding: 8px 12px;
+  }
+
+  .SearchBar .search-btn:hover {
+    background-color: #2D3142;
+  }
+
+  .dropdown a:hover {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background: #EF8354;
+    color: #02081C;
+  }
+}

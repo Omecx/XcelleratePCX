@@ -1,0 +1,90 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+.sign-in-box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.sign-in-box button {
+    background-color: #EF8354;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.sign-in-box a {
+    text-decoration: none;
+    color: #2D3142;
+}
+
+.back-top {
+    height: 40px;
+    width: 100%;
+    background-color: #BFC0C0;
+    color: #2D3142;
+    font-size: large;
+    font-weight: 600;
+}
+
+.back-top:hover {
+    background-color: #e0e5e5db;
+}
+
+.footer-main {
+    background-color: #2D3142;
+    padding: 10px;
+}
+
+.footer-section {
+    background-color: #2D3142;
+    color: #BFC0C0;
+}
+
+.footer-section p {
+    color: #EF8354;
+}
+
+.footer-section li {
+    list-style: none;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #EF8354;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #1d1f2a;
+    color: #BFC0C0;
+}
+
+@media screen and (min-width:450px) {
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "block0 block0 block0"
+        "block1 block2 block3";
+    }
+    .block0 {
+        grid-area: block0;
+        width: 100%;
+    }
+    
+    .block1 {
+        grid-area: block1;
+    }
+    
+    .block2 {
+        grid-area: block2; 
+    }
+    
+    .block3 {
+        grid-area: block3;
+    }    
+}

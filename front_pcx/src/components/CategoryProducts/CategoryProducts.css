@@ -1,0 +1,12 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.ct-product-main {
+    display: flex;
+    margin-top: 100px;
+    background-color: aquamarine;
+}

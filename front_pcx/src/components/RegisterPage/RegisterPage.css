@@ -1,0 +1,107 @@
+/* #EF8354, #FFFFFF, #BFC0C0, #4F5D75, #2D3142 */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.register-form-cont img {
+    height: 10vh;
+}
+
+
+.register-form {
+    margin-top: 50px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form h2 {
+    align-self: center;
+}
+
+.register-form-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: static;
+    padding: 10px 10px;
+    color: #EF8354;
+    background-color: #4F5D75;
+    border-radius: 10px;
+    border: #2D3142 solid 5px;
+    font-weight: 500;
+    padding: 35px 35px 35px 35px;
+    box-shadow: 5px 10px 8px #4F5D75;
+}
+
+.register-form-fields h3{
+    color: #e56934;
+}
+
+.register-form-fields button {
+    margin-top: 20px;
+    padding: 1px 1px;
+    background-color: #EF8354;
+    border-radius: 15px;
+    border: #2D3142 solid 2px;
+    color: #2D3142;
+}
+
+.register-form-fields button:hover {
+    background-color: #e56934;
+}
+
+.register-form-fields input[type=text],
+.register-form-fields input[type=password] {
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    outline: none;
+}
+
+.register-form-fields input[type=text]:hover,
+.register-form-fields input[type=password]:hover {
+    outline: #2D3142 solid 4px;
+}
+.register-form-fields input[type=text]:focus,
+.register-form-fields input[type=password]:focus {
+    border: #e56934c2 solid 3px;
+}
+
+@media (min-width: 751px) {
+    .register-form {
+        /* Increase the size of the form for larger screens */
+        padding: 20px; /* Adjust padding as needed */
+    }
+    
+    .register-form-fields {
+        /* Increase the size of form fields for larger screens */
+        padding: 50px; /* Adjust padding as needed */
+    }
+
+    .register-form-fields button {
+        /* Increase the button size for larger screens */
+        padding: 15px 30px; /* Adjust padding as needed */
+    }
+
+    /* Increase the font size of labels and input fields for larger screens */
+    .register-form-fields input[type=text], 
+    .register-form-fields input[type=password], 
+    .register-form-fields label {
+        font-size: 25px; /* Adjust font size as needed */
+    }
+}
+
+/* .register-form-fields label {
+    background-color: aqua;
+    float: left;
+}
+
+.register-form-fields input {
+    float: right;
+} */
+
