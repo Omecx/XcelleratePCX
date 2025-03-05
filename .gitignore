@@ -1,4 +1,178 @@
+###########################
+# Project-specific excludes
+###########################
+# Documentation and change tracking files
+/ChangeDocs/
 /component-refactoring-summary.md
-/env
-/rejected
-/tempCodeRunnerFile.python
+rejected/
+fix-eslint-warnings.js
+api-endpoint-fixes-update.md
+
+# Patch and merge artifacts
+*.rej
+*.orig
+
+# Temporary files
+tempCodeRunnerFile.python
+*.tmp
+*.temp
+
+###########################
+# Environment & Configuration
+###########################
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/env/
+
+# Keep example env file
+!.env.example
+
+###########################
+# Database files
+###########################
+*.sqlite
+*.sqlite3
+*.db
+db.sqlite3
+*.sql
+*.bak
+
+###########################
+# Media and uploaded files
+###########################
+/media/
+/uploads/
+/static/
+/back_pcx/media/
+
+###########################
+# Frontend specific
+###########################
+# Dependencies
+/front_pcx/node_modules/
+/node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/front_pcx/coverage/
+/coverage/
+
+# Production build
+/front_pcx/build/
+/front_pcx/dist/
+/build/
+/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Cache
+.cache/
+.eslintcache
+.npm
+.parcel-cache
+
+# Package files
+*.tgz
+.yarn-integrity
+
+###########################
+# Backend specific
+###########################
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+/venv/
+/.venv/
+/ENV/
+
+###########################
+# IDE and Editor files
+###########################
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-*
+.DS_Store
+Thumbs.db
+.project
+.classpath
+.settings/
+
+###########################
+# Framework specific
+###########################
+# React/Next.js
+.next/
+out/
+
+# Django
+*.pot
+local_settings.py
+db.sqlite3-journal
+
+# Serverless
+.serverless/
+
+# Local Netlify folder
+.netlify/
+
+# Django Database
+back_pcx/db.sqlite3
+back_pcx/db.sqlite3-journal
+
+# Django Media
+back_pcx/media/
+back_pcx/media/profile_pics/
+back_pcx/media/uploads/
+
+# Django Static Collection (if used)
+back_pcx/static/
+back_pcx/staticfiles/
+
+# Django Cache
+back_pcx/**/__pycache__/
+back_pcx/**/*.py[cod]
+back_pcx/**/*.so
+
+# Django Local Settings
+back_pcx/local_settings.py
+back_pcx/.env
+
+# Django Logs
+back_pcx/logs/
+back_pcx/**/*.log
+
+# Django Test/Development Files
+back_pcx/testo.py
+back_pcx/.coverage
+back_pcx/htmlcov/
