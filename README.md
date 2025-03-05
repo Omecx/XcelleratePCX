@@ -39,10 +39,8 @@ Below are the setup instructions for both parts.
    Use the first line when forked the repo
 ```bash
 git clone https://github.com/yourusername/XcelleratePCX.git
- OR
+# or
 git clone https://github.com/Omecx/XcelleratePCX.git
-
-```bash
 cd XcelleratePCX/front_pcx
 ```
 
